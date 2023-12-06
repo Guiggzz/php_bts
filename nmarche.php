@@ -26,14 +26,10 @@ function escalier($nbMarches, array $deplacements) {
             else {
                 foreach ($deplacements as $d) {
                     array_push($combinaisons, array_merge($prochaineCombinaison, [$d]));
-
-
             }}
-
-
     }while(count($combinaisons) > 0);
 }
 
 
-echo json_encode (escalier(11, [2, 3]));
+echo json_encode (escalier(1001, [2, 3]));
 ?>
