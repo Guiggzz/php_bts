@@ -9,18 +9,31 @@
 // haut (ou une erreur si pas de solution)
 
 
-function escalier($n, $deplacements) {
+function escalier($nbMarches, array $deplacements) {
     $combinaisons = [];
     foreach($deplacements as $d){
         array_push($combinaisons, [$d]);
     }
     echo json_encode($combinaisons), PHP_EOL;
     do{
-        
+        $prochaineCombinaison = array_shift($combinaisons);
+            if (array_sum($prochaineCombinaison) == $nbMarches){
+                return json_encode($prochaineCombinaison);
+            }
+            else if (array_sum($prochaineCombinaison) > $nbMarches){
+                //
+            }
+            else {
+                foreach ($deplacements as $d) {
+                    array_push($combinaisons, array_merge($prochaineCombinaison, [$d]));
 
-    }while(true);
+
+            }}
+
+
+    }while(count($combinaisons) > 0);
 }
 
 
-echo escalier(11, [2, 3])
+echo json_encode (escalier(11, [2, 3]));
 ?>
