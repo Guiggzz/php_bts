@@ -1,12 +1,6 @@
 <?php
 
-// On souhaite monter un escalier de N 
-// marches, avec des déplacements d’un 
-// nombre spécifique de marches (ou 
-// plusieurs). Développer une fonction qui 
-// indique la première solution trouvée 
-// qui permet d’arriver exactement en 
-// haut (ou une erreur si pas de solution)
+// On souhaite monter un escalier de N marches, avec des déplacements d’un nombre spécifique de marches (ou plusieurs). Développer une fonction qui indique la première solution trouvée qui permet d’arriver exactement en haut (ou une erreur si pas de solution)
 
 
 function escalier($nbMarches, array $deplacements) {
