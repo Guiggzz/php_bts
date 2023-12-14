@@ -67,7 +67,7 @@ function triBullesAmeliore(array $tableau)
 
 
 function triInsertion($tableau) {
-    $n = count($tableau);
+$n = count($tableau);
     
     for ($i = 1; $i < $n; $i++) {
         $cle = $tableau[$i];
