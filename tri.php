@@ -84,6 +84,29 @@ $n = count($tableau);
     return $tableau;
 }
 
+function triSequentiel($recherche, $tableau){
+    foreach($tableau as $n){
+        if ($n == $recherche){
+            return  True;
+        }
+    }
+}
+
+
+function triDicho($recherche, $tableau){
+    if (count($tableau)%2 == 0){
+        $mediane = count($tableau)/2 + 1;
+        if ($mediane == $recherche){
+            return True;
+            echo("J'ai trouvé la valeur");}
+    }
+    } 
+
+
+
+}
+
+
 echo "Saisissez la taille du tableau : ";
 $tailleTableau = intval(trim(fgets(STDIN)));
 $tableauAleatoire = genererTableau($tailleTableau);
@@ -95,7 +118,10 @@ $algorithmes = [
     'bulles'          => "triBulles",
     'bulles amélioré' => "triBullesAmeliore",
     'insertion'       => "triInsertion",
-    'natif'           => "sort"
+    'natif'           => "sort",
+    'sequentiel'      => "triSequentiel",
+    'dichotomie'      => "triDicho"
+
 ];
 foreach ($algorithmes as $name => $function) {
     echo PHP_EOL;

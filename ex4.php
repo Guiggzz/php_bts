@@ -8,7 +8,7 @@ function nbchiffre($nombre){
     }
 }
 
-echo nbchiffre(125) . PHP_EOL;
+echo nbchiffre(125).PHP_EOL;
 
 function puissance($nb, $puiss){
     if ($puiss < 1){
@@ -18,6 +18,27 @@ function puissance($nb, $puiss){
     }
 }
 
-echo puissance(2, 2);
+echo puissance(2, 2).PHP_EOL;
 
+function fibobo($n){
+    if ($n <= 1) {
+        return $n;
+    } else {
+        return fibobo($n - 1) + fibobo($n - 2);
+    }
+}
+
+function fibofas($n, &$memo = []) {
+    if ($n <= 1) {
+        return $n;
+    } elseif (array_key_exists($n, $memo)) {
+        return $memo[$n];
+    } else {
+        $memo[$n] = fibofas($n - 1, $memo) + fibofas($n - 2, $memo);
+        return $memo[$n];
+    }
+}
+
+echo fibobo(4) .PHP_EOL ;
+echo fibofas(50) .PHP_EOL;
 ?>
